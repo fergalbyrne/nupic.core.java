@@ -1,0 +1,128 @@
+nupic.java.core documentation
+======================
+Fergal Byrne, <fergalbyrnedublin@gmail.com>
+0.0.1, 2014-04-19
+
+:toc:
+:numbered:
+
+
+Introduction
+------------
+
+link:http://numenta.org[NuPIC] is an implementation of Jeff Hawkins' Cortical Learning ALgorithm.
+
+Api documentation for link:api/clojure/index.html[Clojure] and link:api/java/index.html[Java].
+
+Project Maturity
+----------------
+
+_nupic-core-java_ is a young project and is in experimental phase.
+
+Install
+-------
+
+This section covers a installation of _nupic-core-java_.
+
+Leiningen
+~~~~~~~~~
+
+The simplest way to use _nupic-core-java_ on clojure project, is including it on dependency
+vector of your *_project.clj_* file:
+
+._on project.clj_
+[source,clojure]
+----
+[nupic-core "0.0.1"]
+----
+
+Maven
+~~~~~
+
+Also, you can use it on your java projects with maven. As first step add a clojars repository:
+
+[source,xml]
+----
+<repository>
+    <id>clojars.org</id>
+    <url>http://clojars.org/repo</url>
+</repository>
+----
+
+Following of nupic-core package dependecy:
+
+[source,xml]
+----
+<dependency>
+    <groupId>nupic-core</groupId>
+    <artifactId>nupic-core</artifactId>
+    <version>0.0.1</version>
+</dependency>
+----
+
+Supported features
+------------------
+
+Stuff
+~~~~~~~~~~
+
+
+User guide
+----------
+
+Introduction
+~~~~~~~~~~~~
+
+Example importing `nupic-core` namespace on clojure file:
+
+._yours/samplens.clj_
+[source,clojure]
+----
+(ns yours.samplens
+  (:require [nupic-core :as nc]))
+----
+
+
+
+Java
+++++
+
+With java, each socket class has it own connect/bind method.
+
+Here one example of how connect to a remote socket:
+
+._Client.java_
+[source,java]
+----
+import nupic.Region
+
+public class Client {
+    public static void main(String[] args) {
+        final Region r = new Region();
+        s.connect("tcp:///tmp/sock");
+    }
+}
+----
+
+
+License
+-------
+
+----
+Copyright © 2014 David Ragazzi, Fergal Byrne and <your name here> (hint!).
+
+Licensed under the GNU Public Licence, Version 3 (the "License"), same as NuPIC.
+You may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.gnu.org/licenses/gpl.html
+
+For commercial use, please contact link:http://groksolutions.com[Grok Solutions].
+
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+----

@@ -1,0 +1,10 @@
+Changelog
+=========
+
+Version 0.0.1
+-------------
+
+Date: 2014-03-19
+
+- Initial version
+- copied structure from https://github.com/niwibe/jnanomsg
